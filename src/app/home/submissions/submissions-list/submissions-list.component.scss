@@ -1,0 +1,67 @@
+.submission-card {
+    padding: var(--pad15) var(--pad2);
+    background-color: var(--white);
+    border: 1px solid var(--extraLightGrey);
+    border-radius: 5px;
+    margin-bottom: var(--pad2);
+    position: relative;
+
+    h2 {
+        font-size: var(--subHeading);
+        font-weight: var(--medium);
+        line-height: 2;
+    }
+
+    p {
+        line-height: 2;
+
+        span {
+            color: var(--grey);
+        }
+    }
+
+    .date {
+        color: var(--red);
+    }
+
+    .status-card {
+        position: absolute;
+        right: var(--pad2);
+        top: var(--pad15);
+        background-color: var(--background);
+        color: var(--darkGrey);
+        border-radius: 5px;
+        padding: var(--pad05) var(--pad1);
+        border: 1px solid var(--extraLightGrey);
+        display: flex;
+        align-items: center;
+
+        .dot {
+            background-color: var(--grey);
+            height: var(--pad1);
+            width: var(--pad1);
+            border-radius: 5px;
+            margin-right: var(--pad05);
+        }
+    }
+
+    .uncomplete {
+        background-color: var(--lightRed);
+        color: var(--red);
+        border: 1px solid var(--red);
+
+        .dot {
+            background-color: var(--red);
+        }
+    }
+
+    .low-risk {
+        background-color: var(--lightGreen);
+        color: var(--green);
+        border: 1px solid var(--green);
+
+        .dot {
+            background-color: var(--green);
+        }
+    }
+}

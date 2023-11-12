@@ -11,9 +11,12 @@
         height: calc(100vh - 200px - var(--pad2));
         margin-top: var(--pad2);
         display: flex;
+        gap: var(--pad2);
 
         .left-data {
             width: 40%;
+            height: calc(100vh - 200px - var(--pad2));
+            overflow-y: auto;
         }
 
         .right-data {

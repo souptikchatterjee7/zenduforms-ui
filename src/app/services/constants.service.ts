@@ -55,25 +55,25 @@ export class ConstantsService {
                 from: 'denisgordiyenya@gmail.com',
                 to: 'denisgordiyenya@gmail.com',
                 dueDate: new Date('2023-12-06'),
-                qualification: 'Uncomplete',
+                status: 'Uncomplete',
             },
             {
                 from: 'denisgordiyenya@gmail.com',
                 to: 'denisgordiyenya@gmail.com',
                 dueDate: new Date('2023-12-06'),
-                qualification: 'Low Risk',
+                status: 'Low Risk',
             },
             {
                 from: 'denisgordiyenya@gmail.com',
                 to: 'denisgordiyenya@gmail.com',
                 dueDate: new Date('2023-12-06'),
-                qualification: 'Uncomplete',
+                status: 'Uncomplete',
             },
             {
                 from: 'denisgordiyenya@gmail.com',
                 to: 'denisgordiyenya@gmail.com',
                 dueDate: new Date('2023-12-06'),
-                qualification: 'Needs Review',
+                status: 'Needs Review',
             },
         ];
 
@@ -179,6 +179,10 @@ export class ConstantsService {
 
     getMenuItems() {
         return this.menuItems;
+    }
+
+    getSubmissionItems() {
+        return this.submissionItems;
     }
 
     getMonths() {

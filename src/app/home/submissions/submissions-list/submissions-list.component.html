@@ -1,1 +1,25 @@
-<p>submissions-list works!</p>
+<div class="submission-card" *ngFor="let item of submissionItems">
+    <h2>Work Flow: Requires Location</h2>
+    <p>
+        <span>From:</span>
+        {{ item.from }}
+    </p>
+    <p>
+        <span>To:</span>
+        {{ item.to }}
+    </p>
+    <p class="date">
+        <span>Due Date:</span>
+        {{ getReadableDate(item.dueDate) }}
+    </p>
+    <div
+        class="status-card"
+        [ngClass]="{
+            uncomplete: item.status === 'Uncomplete',
+            'low-risk': item.status === 'Low Risk'
+        }"
+    >
+        <div class="dot"></div>
+        {{ item.status }}
+    </div>
+</div>

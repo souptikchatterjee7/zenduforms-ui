@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { ConstantsService } from 'src/app/services/constants.service';
 
 @Component({
     selector: 'app-datepicker',
@@ -13,10 +12,7 @@ export class DatepickerComponent {
 
     displayModel = '';
 
-    months: Array<string> = [];
-
-    constructor(private constantService: ConstantsService) {
-        this.months = this.constantService.getMonths();
+    constructor() {
         this.displayModel = this.getFormattedDate(this.dateModel);
     }
 
@@ -34,7 +30,11 @@ export class DatepickerComponent {
 
     getFormattedDate(date: Date) {
         const readableDate =
-            date.getDate() + ' ' + this.months[date.getMonth()];
+            date.getDate() +
+            '/' +
+            (date.getMonth() + 1) +
+            '/' +
+            date.getFullYear();
         return readableDate;
     }
 }

@@ -12,8 +12,11 @@ export class SubmissionsFiltersComponent {
 
     statusOptions: Array<SelectOption> = [];
 
+    toggleOptions: Array<SelectOption> = [];
+
     constructor(private constantService: ConstantsService) {
         this.formOptions = this.constantService.getFormOptions();
         this.statusOptions = this.constantService.getStatusOptions();
+        this.toggleOptions = this.constantService.getToggleOptions();
     }
 }

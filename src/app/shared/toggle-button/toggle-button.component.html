@@ -1,1 +1,12 @@
-<p>toggle-button works!</p>
+<div class="toggle-items">
+    <div
+        class="toggle-item"
+        *ngFor="let option of options; let i = index"
+        [ngClass]="{ active: option.value === activeTab }"
+        (click)="selectOption(option.value)"
+        (keydown)="selectOption(option.value)"
+        tabindex="{i}"
+    >
+        {{ option.displayName }}
+    </div>
+</div>

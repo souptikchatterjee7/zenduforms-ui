@@ -1,0 +1,14 @@
+button {
+    padding: var(--pad15) var(--pad2);
+    border-radius: 5px;
+    border: 1px solid var(--extraLightGrey);
+    background-color: var(--white);
+    color: var(--blue);
+    font-weight: var(--medium);
+    cursor: pointer;
+
+    img {
+        vertical-align: middle;
+        margin-left: var(--pad05);
+    }
+}

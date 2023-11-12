@@ -17,6 +17,8 @@ export class ConstantsService {
 
     statusOptions: Array<SelectOption> = [];
 
+    toggleOptions: Array<SelectOption> = [];
+
     constructor() {
         this.menuItems = [
             {
@@ -132,6 +134,17 @@ export class ConstantsService {
                 value: 'status-5',
             },
         ];
+
+        this.toggleOptions = [
+            {
+                displayName: 'Map',
+                value: 'map',
+            },
+            {
+                displayName: 'List',
+                value: 'list',
+            },
+        ];
     }
 
     getMenuItems() {
@@ -148,5 +161,9 @@ export class ConstantsService {
 
     getStatusOptions() {
         return this.statusOptions;
+    }
+
+    getToggleOptions() {
+        return this.toggleOptions;
     }
 }

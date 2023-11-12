@@ -1,9 +1,23 @@
 <div class="filters-container">
     <div class="filter-items">
-        <app-search-input></app-search-input>
-        <app-single-select></app-single-select>
-        <app-single-select></app-single-select>
-        <app-datepicker></app-datepicker>
+        <div class="filter-item">
+            <app-search-input [placeholder]="'Search . . .'"></app-search-input>
+        </div>
+        <div class="filter-item">
+            <app-single-select
+                [placeholder]="'Select Form'"
+                [options]="formOptions"
+            ></app-single-select>
+        </div>
+        <div class="filter-item">
+            <app-single-select
+                [placeholder]="'Select Status'"
+                [options]="statusOptions"
+            ></app-single-select>
+        </div>
+        <div class="filter-item">
+            <app-datepicker></app-datepicker>
+        </div>
     </div>
     <div class="list-items">
         <app-toggle-button></app-toggle-button>

@@ -1,0 +1,14 @@
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--extraLightGrey);
+    border-radius: 5px;
+    padding: var(--pad2) var(--pad2);
+    background-image: url(../../../assets/dropdown.svg);
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px);
+    background-position-y: 15px;
+    cursor: pointer;
+}

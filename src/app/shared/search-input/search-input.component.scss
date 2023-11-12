@@ -1,0 +1,25 @@
+.inputContainer {
+    position: relative;
+
+    input {
+        width: 100%;
+        background-color: var(--white);
+        border: 1px solid var(--extraLightGrey);
+        border-radius: 5px;
+        padding: var(--pad2) var(--pad2);
+        padding-left: 36px;
+    }
+
+    ::placeholder {
+        color: var(--lightGrey);
+        font-weight: var(--regular);
+    }
+
+    img {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        left: 12px;
+        top: 18px;
+    }
+}

@@ -1,6 +1,7 @@
 .filters-container {
     display: flex;
     align-items: center;
+    margin: var(--pad2) 0;
 
     .filter-items,
     .list-items {
@@ -11,6 +12,10 @@
 
     .filter-items {
         width: 75%;
+
+        .filter-item {
+            width: 200px;
+        }
     }
 
     .list-items {

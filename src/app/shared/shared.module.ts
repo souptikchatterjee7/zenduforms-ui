@@ -6,6 +6,10 @@ import { SearchInputComponent } from './search-input/search-input.component';
 import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
 import { SideButtonComponent } from './side-button/side-button.component';
 
+import { FormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 @NgModule({
     declarations: [
         DatepickerComponent,
@@ -14,7 +18,12 @@ import { SideButtonComponent } from './side-button/side-button.component';
         ToggleButtonComponent,
         SideButtonComponent,
     ],
-    imports: [CommonModule],
+    imports: [
+        CommonModule,
+        FormsModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+    ],
     exports: [
         DatepickerComponent,
         SingleSelectComponent,

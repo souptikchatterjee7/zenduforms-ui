@@ -1,0 +1,36 @@
+.inputContainer {
+    position: relative;
+    cursor: pointer;
+
+    .calendar {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        left: 12px;
+        top: 18px;
+        cursor: pointer;
+    }
+
+    input {
+        cursor: pointer;
+        width: 100%;
+        background-color: var(--white);
+        border: 1px solid var(--extraLightGrey);
+        border-radius: 5px;
+        padding: var(--pad2) var(--pad2);
+        padding-left: 36px;
+    }
+
+    input::placeholder {
+        color: var(--lightGrey);
+        font-weight: var(--regular);
+    }
+
+    .hidden {
+        position: absolute;
+        z-index: -2;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+    }
+}

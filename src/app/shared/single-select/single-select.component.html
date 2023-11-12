@@ -1,1 +1,8 @@
-<p>single-select works!</p>
+<div class="inputContainer">
+    <select [(ngModel)]="selectedOption">
+        <option value="">{{ placeholder }}</option>
+        <option *ngFor="let option of options" value="{{ option.value }}">
+            {{ option.displayName }}
+        </option>
+    </select>
+</div>

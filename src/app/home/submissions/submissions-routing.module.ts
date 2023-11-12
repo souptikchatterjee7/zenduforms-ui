@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { SubmissionsHomeComponent } from './submissions-home/submissions-home.component';
+
+const routes: Routes = [
+    {
+        path: '',
+        component: SubmissionsHomeComponent,
+    },
+];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],

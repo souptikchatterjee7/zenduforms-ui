@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
+import { MenuItem } from '../interfaces/menu-items';
+import { SubmissionsItem } from '../interfaces/submissions-item';
 
 @Injectable({
     providedIn: 'root',
 })
 export class ConstantsService {
-    config: any = {};
+    menuItems: Array<MenuItem> = [];
+
+    submissionItems: Array<SubmissionsItem> = [];
 
     constructor() {
-        this.config.menuItems = [
+        this.menuItems = [
             {
                 displayName: 'Forms',
                 value: 'forms',
@@ -33,10 +37,36 @@ export class ConstantsService {
                 value: 'workflow',
             },
         ];
+
+        this.submissionItems = [
+            {
+                from: 'denisgordiyenya@gmail.com',
+                to: 'denisgordiyenya@gmail.com',
+                dueDate: new Date('2023-12-06'),
+                qualification: 'Uncomplete',
+            },
+            {
+                from: 'denisgordiyenya@gmail.com',
+                to: 'denisgordiyenya@gmail.com',
+                dueDate: new Date('2023-12-06'),
+                qualification: 'Low Risk',
+            },
+            {
+                from: 'denisgordiyenya@gmail.com',
+                to: 'denisgordiyenya@gmail.com',
+                dueDate: new Date('2023-12-06'),
+                qualification: 'Uncomplete',
+            },
+            {
+                from: 'denisgordiyenya@gmail.com',
+                to: 'denisgordiyenya@gmail.com',
+                dueDate: new Date('2023-12-06'),
+                qualification: 'Needs Review',
+            },
+        ];
     }
 
-    getConstant(key: string) {
-        if (!this.config[key]) return null;
-        return JSON.parse(JSON.stringify(this.config[key]));
+    getMenuItems() {
+        return this.menuItems;
     }
 }

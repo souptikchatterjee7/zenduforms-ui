@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConstantsService } from 'src/app/services/constants.service';
+import { MenuItem } from '../../interfaces/menu-items';
 
 @Component({
     selector: 'app-menu',
@@ -8,13 +9,13 @@ import { ConstantsService } from 'src/app/services/constants.service';
     styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-    menuItems: any;
+    menuItems: Array<MenuItem>;
 
     constructor(
         private contantService: ConstantsService,
         private router: Router
     ) {
-        this.menuItems = this.contantService.getConstant('menuItems');
+        this.menuItems = this.contantService.getMenuItems();
     }
 
     goToPage(route: string) {

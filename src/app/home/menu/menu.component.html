@@ -1,19 +1,18 @@
 <div class="menu">
     <div class="logo">
-        <p (click)="goToPage('home')">ZenduForms</p>
+        <p>ZenduForms</p>
     </div>
     <div class="nav-items">
-        <div
-            class="nav-item"
-            *ngFor="let item of menuItems"
-            (click)="goToPage(item.value)"
-        >
-            <img src="assets/{{ item.value }}.svg" />
+        <div class="nav-item" *ngFor="let item of menuItems">
+            <img
+                src="assets/{{ item.value }}.svg"
+                alt="{{ item.displayName }}"
+            />
             <p>{{ item.displayName }}</p>
         </div>
     </div>
     <div class="sidebar">
-        <img src="assets/notification.svg" />
-        <img src="assets/logout.svg" />
+        <img src="assets/notification.svg" alt="Notification" />
+        <img src="assets/logout.svg" alt="Logout" />
     </div>
 </div>

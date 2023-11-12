@@ -3,7 +3,11 @@
         <p>ZenduForms</p>
     </div>
     <div class="nav-items">
-        <div class="nav-item" *ngFor="let item of menuItems">
+        <div
+            class="nav-item"
+            *ngFor="let item of menuItems"
+            [ngClass]="{ active: activeTab === item.value }"
+        >
             <img
                 src="assets/{{ item.value }}.svg"
                 alt="{{ item.displayName }}"

@@ -11,14 +11,18 @@ import { MenuItem } from '../../interfaces/menu-items';
 export class MenuComponent {
     menuItems: Array<MenuItem>;
 
+    activeTab = '';
+
     constructor(
         private contantService: ConstantsService,
         private router: Router
     ) {
         this.menuItems = this.contantService.getMenuItems();
+        this.checkRoute(this.router.url);
     }
 
-    goToPage(route: string) {
-        this.router.navigate([route]);
+    checkRoute(route: string) {
+        route = route.split('/')[1];
+        this.activeTab = route;
     }
 }

@@ -7,7 +7,7 @@
     align-items: center;
 
     .logo {
-        width: 25%;
+        width: 20%;
 
         p {
             color: var(--white);
@@ -19,15 +19,18 @@
     }
 
     .nav-items {
-        width: 50%;
+        width: 60%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: var(--pad2);
 
         .nav-item {
             display: flex;
             align-items: center;
             cursor: pointer;
+            height: 60px;
+            padding: 0 var(--pad2);
 
             img {
                 width: 20px;
@@ -38,10 +41,14 @@
                 color: var(--white);
             }
         }
+
+        .active {
+            background-color: #023e8a;
+        }
     }
 
     .sidebar {
-        width: 25%;
+        width: 20%;
         align-items: center;
         justify-content: end;
         display: flex;

@@ -39,23 +39,16 @@ $zenduforms-ui-theme: mat.define-light-theme(
 :root {
     --blue: #157afe;
     --light-blue: #e7f1fe;
-    --black: #000000;
-    --black-variant: #11151c;
+    --black: #11151c;
     --darkGrey: #666666;
     --grey: #999999;
-    --yellow: #ffbe0b;
-    --orange: #fdb94b;
     --lightGrey: #bbbbbb;
     --extraLightGrey: #dddddd;
     --red: #c01f1f;
-    --light-red: #ffe2e3;
-    --mediumRed: #8c4c45;
+    --lightRed: #ffe2e3;
     --green: #006054;
-    --light-green: #e6ffea;
-    --mediumGreen: #679d75;
-    --fadedGreen: #a3c3ab;
+    --lightGreen: #a3c3ab;
     --background: #f6f6f6;
-    --disabled: #f8f8f8;
     --white: #ffffff;
     --bigHeading: 24px;
     --heading: 18px;
@@ -72,9 +65,6 @@ $zenduforms-ui-theme: mat.define-light-theme(
     --pad25: 20px;
     --pad3: 24px;
     --pad4: 32px;
-    --pad5: 40px;
-    --pad6: 48px;
-    --pad8: 64px;
 }
 
 * {
@@ -82,7 +72,7 @@ $zenduforms-ui-theme: mat.define-light-theme(
     outline: 0;
     margin: 0;
     padding: 0;
-    color: var(--blue);
+    color: var(--black);
     line-height: 1.5;
     box-sizing: border-box;
     font-size: var(--normal);

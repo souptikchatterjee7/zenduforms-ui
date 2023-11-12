@@ -1,1 +1,19 @@
-<p>menu works!</p>
+<div class="menu">
+    <div class="logo">
+        <p (click)="goToPage('home')">ZenduForms</p>
+    </div>
+    <div class="nav-items">
+        <div
+            class="nav-item"
+            *ngFor="let item of menuItems"
+            (click)="goToPage(item.value)"
+        >
+            <img src="assets/{{ item.value }}.svg" />
+            <p>{{ item.displayName }}</p>
+        </div>
+    </div>
+    <div class="sidebar">
+        <img src="assets/notification.svg" />
+        <img src="assets/logout.svg" />
+    </div>
+</div>

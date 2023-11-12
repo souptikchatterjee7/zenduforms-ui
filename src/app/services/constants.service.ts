@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { MenuItem } from '../interfaces/menu-items';
 import { SubmissionsItem } from '../interfaces/submissions-item';
 import { SelectOption } from '../interfaces/select-option';
+import { GoogleMarker } from 'src/app/interfaces/google-marker';
 
 @Injectable({
     providedIn: 'root',
@@ -18,6 +19,8 @@ export class ConstantsService {
     statusOptions: Array<SelectOption> = [];
 
     toggleOptions: Array<SelectOption> = [];
+
+    markers: Array<GoogleMarker> = [];
 
     constructor() {
         this.menuItems = [
@@ -145,6 +148,33 @@ export class ConstantsService {
                 value: 'list',
             },
         ];
+
+        this.markers = [
+            {
+                lat: 12.912427,
+                lng: 77.647178,
+            },
+            {
+                lat: 12.913263,
+                lng: 77.640441,
+            },
+            {
+                lat: 12.908369,
+                lng: 77.646534,
+            },
+            {
+                lat: 12.912803,
+                lng: 77.648337,
+            },
+            {
+                lat: 12.915815,
+                lng: 77.64499,
+            },
+            {
+                lat: 12.91198,
+                lng: 77.652032,
+            },
+        ];
     }
 
     getMenuItems() {
@@ -165,5 +195,9 @@ export class ConstantsService {
 
     getToggleOptions() {
         return this.toggleOptions;
+    }
+
+    getMarkers() {
+        return this.markers;
     }
 }

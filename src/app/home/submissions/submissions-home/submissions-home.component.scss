@@ -5,4 +5,21 @@
         font-size: var(--bigHeading);
         font-weight: var(--medium);
     }
+
+    .display-data {
+        width: 100%;
+        height: calc(100vh - 200px - var(--pad2));
+        margin-top: var(--pad2);
+        display: flex;
+
+        .left-data {
+            width: 40%;
+        }
+
+        .right-data {
+            width: 60%;
+            background-color: var(--background);
+            border-radius: 5px;
+        }
+    }
 }
